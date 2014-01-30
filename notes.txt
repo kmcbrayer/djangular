@@ -1,0 +1,4 @@
+set up static files
+django rest framework
+models
+urls

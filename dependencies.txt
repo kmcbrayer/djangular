@@ -2,11 +2,12 @@ python 2.7
 pip
 virtualenv maybe??
 git
-mysql-client
-mysql-server
-mysql-python
+mariadb
 pip install python-dev
 sudo apt-get install libmysqlclient-dev
 pip install south
 pip install djangorestframework
-
+node
+npm
+yeoman
+grunt-shell

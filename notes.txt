@@ -1,4 +1,5 @@
-set up static files
-django rest framework
+set up static files:
+   add angular
+django tastypie
 models
 urls

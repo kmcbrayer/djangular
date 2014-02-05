@@ -1,5 +1,15 @@
 set up static files:
    add angular
 django tastypie
-models
-urls
+models:
+	python manage.py validate # validate models
+settings:
+	south is a bitch
+	on app creation you need to:
+		create database # according to database_name in settings.py
+		run syncdb
+		1 add tastypie to installed_apps
+		2 run manage schemamigration <app_name> --initial
+		3 run manage migrate --fake
+		do 1,2,3 for backend
+urls:

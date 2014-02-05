@@ -36,7 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crawler',
+    'backend',
+    'tastypie',
     'south',
 )
 
@@ -60,7 +61,7 @@ WSGI_APPLICATION = 'Djangular.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'crawler',
+        'NAME': 'app',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '',

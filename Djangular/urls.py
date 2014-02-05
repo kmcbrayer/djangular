@@ -11,7 +11,7 @@ person_resource = PersonResource()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', TemplateView.as_view(template_name="index.html")),
-    (r'^api/', include(person_resource.urls)),
+    url(r'^api/', include(person_resource.urls)),
 
     url(r'^admin/', include(admin.site.urls)),
 )

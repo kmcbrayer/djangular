@@ -15,7 +15,11 @@
   </p>
   <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
 </div>
-
+<div class="people">
+  <li ng-repeat="person in Persons">
+    name: {{person.first_name}} {{person.last_name}}
+  </li>
+</div>
 <div class="row marketing">
   <h4>HTML5 Boilerplate</h4>
   <p>

@@ -6,3 +6,5 @@ class Person(models.Model):
 	last_name = models.CharField(max_length=200)
 	def __unicode__(self):
 		return self.first_name
+ 
+ 

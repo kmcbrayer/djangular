@@ -14,6 +14,12 @@ settings:
 		do 1,2,3 for backend
 urls:
 
+set it to where api is own app:
+	write to models and urls and apis.py
+	append urls to main urls.
+
+
+
 #model changeing script:
 import json, re
 

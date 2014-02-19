@@ -1,5 +1,3 @@
-set up static files:
-   add angular
 django tastypie
 models:
 	python manage.py validate # validate models
@@ -12,8 +10,7 @@ settings:
 		2 run manage schemamigration <app_name> --initial
 		3 run manage migrate --fake
 		do 1,2,3 for backend
-urls:
 
-set it to where api is own app:
-	write to models and urls and apis.py
-	append urls to main urls.
+TODOs:
+fix urls
+look into pystache for building python files

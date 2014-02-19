@@ -11,5 +11,4 @@ angular.module('djangularApp')
         success(function(data,status,headers,config){
         	$scope.Persons = data.objects;
         });
-    
   });

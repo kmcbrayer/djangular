@@ -13,4 +13,20 @@ settings:
 
 TODOs:
 fix urls
-look into pystache for building python files
+add data in admin
+get api working
+
+string.replace:
+infile = open('path/to/input/file')
+outfile = open('path/to/input/file', 'w')
+
+replacements = {'zero':'0', 'temp':'bob', 'garbage':'nothing'}
+
+for line in infile:
+    for src, target in replacements.iteritems():
+        line = line.replace(src, target)
+    outfile.write(line)
+infile.close()
+outfile.close()
+
+

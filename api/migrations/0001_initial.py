@@ -9,21 +9,21 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         # Adding model 'Person'
-        db.create_table(u'backend_person', (
+        db.create_table(u'api_person', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('first_name', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('last_name', self.gf('django.db.models.fields.CharField')(max_length=200)),
         ))
-        db.send_create_signal(u'backend', ['Person'])
+        db.send_create_signal(u'api', ['Person'])
 
 
     def backwards(self, orm):
         # Deleting model 'Person'
-        db.delete_table(u'backend_person')
+        db.delete_table(u'api_person')
 
 
     models = {
-        u'backend.person': {
+        u'api.person': {
             'Meta': {'object_name': 'Person'},
             'first_name': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -31,4 +31,4 @@ class Migration(SchemaMigration):
         }
     }
 
-    complete_apps = ['backend']
+    complete_apps = ['api']

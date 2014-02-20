@@ -7,8 +7,9 @@ angular.module('djangularApp')
       'AngularJS',
       'Karma'
     ];
-    $http({method: 'GET',url:'/api/person/?format=json'}).
+    $http({method: 'GET',url:'/api/persons/'}).
         success(function(data,status,headers,config){
-        	$scope.Persons = data.objects;
+        	$scope.Persons = data;
+          console.log(data)
         });
   });

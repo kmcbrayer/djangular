@@ -10,6 +10,6 @@ angular.module('djangularApp')
     $http({method: 'GET',url:'/api/persons/'}).
         success(function(data,status,headers,config){
         	$scope.Persons = data;
-          console.log(data)
+          console.log(data);
         });
   });

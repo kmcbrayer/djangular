@@ -1,24 +1,30 @@
-TODOs:
-    pycharm javascript linting
-    python templating stuff, write it?
+#api_config.py
+from rest_framework import viewsets, routers
 
-models:
-	python manage.py validate # validate models
-settings:
-	south is a bitch
-	on app creation you need to:
-		create database # according to database_name in settings.py
-		run syncdb
-		1 add tastypie to installed_apps
-		2 run manage schemamigration <app_name> --initial
+#Init router
+router = routers.DefaultRouter()
 
-		do 1,2,3 for api
-south migrations:
-    after initial setup
-    just do:
-        manage.py migrate <app_name> #prob api
-urls:
+from models import Person
+class PersonViewSet(viewsets.ModelViewSet):
+    model = Person
+router.register(r'persons',PersonViewSet)
 
-set it to where api is own app:
-	write to models and urls and apis.py
-	append urls to main urls.
+class Routers(self):
+	rtr = router
+
+	def get_routers():
+		return rtr
+
+#not for api_config.py
+#regex search Models.py for model name
+#add model name to array
+#new_api_string = ''
+#for model_name in model_array:
+#    new_api_string += build_api_string(model_name)
+#insert new_api_string into api_config.py via regex and file IO??
+
+def build_api_string(model_name):
+	return "from models import "+model_name.title()+"\n" \
+			"class "+model_name.title()+"ViewSet(viewsets.ModelViewSet):\n\t" \
+			"model = "+model_name.title()+"\n" \
+			"router.register(r'"+model_name+"s',"+model_name.title()+"ViewSet)\n\n"
